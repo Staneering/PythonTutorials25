@@ -1,0 +1,83 @@
+# Control Structures in Python
+
+# 1. Conditional Statements (if, elif, else)
+# Conditional statements are used to execute different blocks of code based on certain conditions.
+
+# Example 1: Basic if-else statement
+x = 10
+if x > 5:
+    print(f"x is greater than 5")
+else:
+    print(f"x is less than or equal to 5")
+
+# Example 2: Using elif for multiple conditions
+y = 20
+if y < 10:
+    print(f"y is less than 10")
+elif y < 30:
+    print(f"y is less than 30 but greater than or equal to 10")
+else:
+    print(f"y is 30 or greater")
+
+# Example 3: Nested if statements
+age = 18
+if age >= 18:
+    if age >= 21:
+        print(f"Adult and can drink legally in many countries")
+    else:
+        print(f"Adult but can't drink legally in many countries")
+else:
+    print(f"Not an adult yet")
+
+# 2. Loops: for and while
+
+# For loop: Used for iterating over a sequence (like a list, tuple, string, etc.)
+
+# Example 1: Using a for loop with a range
+print("\nFor loop examples:")
+for i in range(5):
+    print(i)  # Prints numbers 0 to 4
+
+# Example 2: Iterating over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)  # Prints each fruit name
+
+# Example 3: Using for loop with a range and step
+for i in range(0, 10, 2):
+    print(i)  # Prints 0, 2, 4, 6, 8 (steps of 2)
+
+# While loop: Used for repeated execution as long as a condition is True
+# Example 1: Basic while loop
+print("\nWhile loop examples:")
+count = 0
+while count < 5:
+    print(count)
+    count += 1  # Increment the counter (this prevents an infinite loop)
+
+# Example 2: Using while loop with a break condition
+sum_of_numbers = 0
+number = 1
+while True:  # Infinite loop until break condition
+    sum_of_numbers += number
+    if sum_of_numbers >= 15:
+        break  # Exit the loop once sum is greater than or equal to 15
+    number += 1
+print(f"The sum of numbers until it exceeds 15 is: {sum_of_numbers}")
+
+# Example 3: Using while loop with continue (to skip current iteration)
+print("\nSkipping even numbers:")
+for num in range(10):
+    if num % 2 == 0:
+        continue  # Skip the rest of the loop for even numbers
+    print(num)  # Only prints odd numbers: 1, 3, 5, 7, 9
+
+# 3. Combining Control Structures
+
+# Example: Finding the largest number in a list
+numbers = [1, 9, 3, 7, 5]
+largest = numbers[0]
+for number in numbers:
+    if number > largest:
+        largest = number
+print(f"The largest number in the list is: {largest}")
